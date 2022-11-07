@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+ 
+</head>
+<body>
+  <main class="container"> 
+   <div class="leftside">
+    <article>
+
+  
+      <img class="logo" src="./images/card-logo.svg" alt="cardlogo">
+      <h1 id="cardnumber" ></h1>
+      <div id="folder" class="subarticle">
+          
+            
+            <h2 id="cardname"></h2><span id="MMYY"></span> 
+         </div>
+      
+  
+     </article>
+     <img  class="cardback" src="/images/bg-card-back.png" alt="">
+   </div>
+   <div class="rightside">
+    <div  id ='success'>
+      <img src="./images/icon-complete.svg" alt="complete tick" >
+      <h1>THANK YOU!</h1>
+      <p>We've added your card details</p>
+      <button type="submit">Continue</button>
+    </div>
+     <form id="y" class="cardInfo" onsubmit="return false">
+      <label for="name">Cardholder Name</label>
+      <input id="name" type="text" onchange="changeName()"  required>
+      <p id="feedback"></p>
+      <label for="">Card Number</label>
+      <input id="number" type="text" maxlength="16" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false  ;"   onchange="changeNumber()" required>
+      <p id="feedbackNumber"></p>
+      <div class="addInfo">
+        <label for="MM">Exp. Date (MM/YY)</label>
+        <p id="feedbackMMYY"></p>
+        <label for="CVC">CVC</label>
+        <p id="feedbackCVC"></p>
+        <div class="extras">
+          <input id="mm" name="MM" type="text" maxlength="2" placeholder="MM" onchange="changeYYMM()" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false  ;" required >
+          <input id="yy" type="text"  maxlength="2" placeholder="YY" onchange="changeYYMM()" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false  ;" required >
+          <input  id="cvc" name="CVC "type="text"  onchange="changeYYMM()"  maxlength="3"  placeholder="e.g. 123" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false  ;" required>
+        </div>
+       
+      </div>
+     
+        <button onclick="successPage()" id="button">Confrim</button>
+     
+     </form>
+   </div>
+ 
+   
+
+   
+  </main>
+
+
+
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Naida Islam</a>.
+  </footer>
+  <script  src="index.js"></script>
+</body>
+</html>
