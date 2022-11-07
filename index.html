@@ -20,11 +20,11 @@
 
   
       <img class="logo" src="./images/card-logo.svg" alt="cardlogo">
-      <h1 id="cardnumber" ></h1>
+      <h1 id="cardnumber" >0000 0000 0000 0000</h1>
       <div id="folder" class="subarticle">
           
             
-            <h2 id="cardname"></h2><span id="MMYY"></span> 
+            <h2 id="cardname">JANE APPLESEED</h2><span id="MMYY">00/00</span> 
          </div>
       
   
@@ -40,10 +40,10 @@
     </div>
      <form id="y" class="cardInfo" onsubmit="return false">
       <label for="name">Cardholder Name</label>
-      <input id="name" type="text" onchange="changeName()"  required>
+      <input id="name" type="text" onchange="changeName()"  required placeholder="e.g. Jane Appleseed">
       <p id="feedback"></p>
       <label for="">Card Number</label>
-      <input id="number" type="text" maxlength="16" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false  ;"   onchange="changeNumber()" required>
+      <input id="number" placeholder="e.g.1234 5678 9123 0000" type="text" maxlength="16" onkeypress="if ( isNaN( String.fromCharCode(event.keyCode) )) return false  ;"   onchange="changeNumber()" required>
       <p id="feedbackNumber"></p>
       <div class="addInfo">
         <label for="MM">Exp. Date (MM/YY)</label>
